@@ -14,7 +14,9 @@
         android:layout_height="wrap_content"
         android:text="Jokenpô"
         android:layout_gravity="center"
-        android:textColor="@color/colorSoftFront"/>
+        android:textColor="@color/colorSoftFront"
+        android:fontFamily="@font/antonregular"
+        android:textSize="50sp"/>
 
     <Button
         android:layout_width="match_parent"
@@ -22,7 +24,9 @@
         android:text="Classic"
         android:background="@drawable/soft_background"
         android:textColor="@color/colorSoftFront"
-        android:layout_marginTop="160dp"/>
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/antonregular"
+        android:textSize="30sp"/>
 
     <Button
         android:layout_width="match_parent"
@@ -30,7 +34,9 @@
         android:text="KWW"
         android:background="@drawable/soft_background"
         android:textColor="@color/colorSoftFront"
-        android:layout_marginTop="35dp"/>
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/antonregular"
+        android:textSize="30sp"/>
 
     <Button
         android:layout_width="match_parent"
@@ -38,7 +44,9 @@
         android:text="Infinite"
         android:background="@drawable/soft_background"
         android:textColor="@color/colorSoftFront"
-        android:layout_marginTop="35dp"/>
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/antonregular"
+        android:textSize="30sp"/>
 
     <Button
         android:layout_width="match_parent"
@@ -46,6 +54,8 @@
         android:text="Mode explanation"
         android:background="@drawable/soft_background"
         android:textColor="@color/colorSoftFront"
-        android:layout_marginTop="35dp"/>
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/antonregular"
+        android:textSize="30sp"/>
 
 </LinearLayout>
