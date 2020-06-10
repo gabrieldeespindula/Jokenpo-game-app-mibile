@@ -13,26 +13,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Jokenpô"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:textColor="@color/colorSoftFront"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Classic"/>
+        android:text="Classic"
+        android:background="@drawable/soft_background"
+        android:textColor="@color/colorSoftFront"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="KWW"/>
+        android:text="KWW"
+        android:background="@drawable/soft_background"
+        android:textColor="@color/colorSoftFront"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Infinite"/>
+        android:text="Infinite"
+        android:background="@drawable/soft_background"
+        android:textColor="@color/colorSoftFront"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Mode explanation"/>
+        android:text="Mode explanation"
+        android:background="@drawable/soft_background"
+        android:textColor="@color/colorSoftFront"/>
 
 </LinearLayout>
