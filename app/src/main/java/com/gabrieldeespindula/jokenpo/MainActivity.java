@@ -1,5 +1,6 @@
 package com.gabrieldeespindula.jokenpo;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -28,6 +29,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        if (v.getId()==R.id.classic_button){
+            Intent classic = new Intent(this, ClassicActivity.class);
+            startActivity(classic);
+        } else if (v.getId()==R.id.kww_button){
+            Intent kww = new Intent(this, KwwActivity.class);
+            startActivity(kww);
+        } else if (v.getId()==R.id.infinite_button){
+            Intent infinite = new Intent(this, InfiniteActivity.class);
+            startActivity(infinite);
+        } else {
+            Intent mode = new Intent(this, ModeActivity.class);
+            startActivity(mode);
+        }
 
     }
 
