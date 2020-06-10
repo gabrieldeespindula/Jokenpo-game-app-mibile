@@ -9,6 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ModeActivity"></activity>
+        <activity android:name=".InfiniteActivity" />
+        <activity android:name=".KwwActivity" />
+        <activity android:name=".ClassicActivity" />
+        <activity android:name=".GameActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
