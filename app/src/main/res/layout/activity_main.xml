@@ -21,27 +21,31 @@
         android:layout_height="wrap_content"
         android:text="Classic"
         android:background="@drawable/soft_background"
-        android:textColor="@color/colorSoftFront"/>
+        android:textColor="@color/colorSoftFront"
+        android:layout_marginTop="160dp"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="KWW"
         android:background="@drawable/soft_background"
-        android:textColor="@color/colorSoftFront"/>
+        android:textColor="@color/colorSoftFront"
+        android:layout_marginTop="35dp"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Infinite"
         android:background="@drawable/soft_background"
-        android:textColor="@color/colorSoftFront"/>
+        android:textColor="@color/colorSoftFront"
+        android:layout_marginTop="35dp"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Mode explanation"
         android:background="@drawable/soft_background"
-        android:textColor="@color/colorSoftFront"/>
+        android:textColor="@color/colorSoftFront"
+        android:layout_marginTop="35dp"/>
 
 </LinearLayout>
