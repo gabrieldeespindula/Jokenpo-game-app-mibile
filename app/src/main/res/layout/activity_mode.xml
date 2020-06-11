@@ -1,9 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ModeActivity">
+    tools:context=".ModeActivity"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:background="@drawable/background">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Classic: Whoever makes 3 points first wins."
+        android:fontFamily="@font/antonregular"
+        android:background="@drawable/soft_background"
+        android:layout_margin="5dp"
+        android:textColor="@color/colorSoftFront"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/soft_background"
+        android:fontFamily="@font/antonregular"
+        android:gravity="center"
+        android:text="Keep While Win (KWW): keep playing while you win, the game ends when you lose."
+        android:textColor="@color/colorSoftFront"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Infinite: Play forever."
+        android:fontFamily="@font/antonregular"
+        android:background="@drawable/soft_background"
+        android:layout_margin="5dp"
+        android:textColor="@color/colorSoftFront"/>
+
+</LinearLayout>

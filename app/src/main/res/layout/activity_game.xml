@@ -1,9 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ClassicActivity">
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:padding="15dp">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/placar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/soft_background"
+        android:fontFamily="@font/antonregular"
+        android:gravity="center"
+        android:text="10x10"
+        android:textColor="@color/colorSoftFront"
+        android:textSize="40sp" />
+
+    <ImageView
+        android:id="@+id/image_pc"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:contentDescription="MACHINECHOICE"
+        android:src="@drawable/dunno"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="17"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/antonregular"
+            android:gravity="center"
+            android:text="YOU WIN"
+            android:textColor="@color/colorSoftFront"
+            android:textSize="30sp"/>
+
+        <ImageView
+            android:id="@+id/image_you"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:contentDescription="YOURCHOICE"
+            android:src="@drawable/dunno"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/stone_button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/stone"/>
+
+        <Button
+            android:id="@+id/paper_button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/paper"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+        <Button
+            android:id="@+id/scissors_button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/scissors"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
