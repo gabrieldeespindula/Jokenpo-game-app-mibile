@@ -23,12 +23,13 @@
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:contentDescription="MACHINECHOICE" />
+        android:contentDescription="MACHINECHOICE"
+        android:src="@drawable/dunno"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4"
+        android:layout_weight="5"
         android:orientation="vertical">
 
         <TextView
@@ -47,7 +48,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="4"
         android:orientation="vertical">
 
         <ImageView
@@ -56,34 +57,32 @@
             android:layout_height="100dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:contentDescription="YOURCHOICE" />
+            android:contentDescription="YOURCHOICE"
+            android:src="@drawable/dunno"/>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="4"
         android:gravity="center"
         android:orientation="horizontal">
 
-        <ImageButton
+        <Button
             android:id="@+id/stone_button"
             android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:contentDescription="STONE" />
+            android:layout_height="100dp"/>
 
-        <ImageButton
+        <Button
             android:id="@+id/paper_button"
             android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:contentDescription="PAPER" />
+            android:layout_height="100dp"/>
 
-        <ImageButton
+        <Button
             android:id="@+id/scissors_button"
             android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:contentDescription="SCISSORS" />
+            android:layout_height="100dp"/>
 
 
     </LinearLayout>
