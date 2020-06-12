@@ -24,6 +24,8 @@ public class ClassicActivity extends AppCompatActivity implements View.OnClickLi
         this.mViewHolder.paper = findViewById(R.id.paper_button);
         this.mViewHolder.scissors = findViewById(R.id.scissors_button);
 
+        this.mViewHolder.winlose.setText("");
+
         this.mViewHolder.stone.setOnClickListener(this);
         this.mViewHolder.paper.setOnClickListener(this);
         this.mViewHolder.scissors.setOnClickListener(this);
