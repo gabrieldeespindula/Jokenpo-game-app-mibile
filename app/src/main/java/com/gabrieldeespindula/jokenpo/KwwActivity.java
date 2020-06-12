@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class KwwActivity extends AppCompatActivity implements View.OnClickListener {
     public static ArrayList<String> pc() {
@@ -44,6 +45,8 @@ public class KwwActivity extends AppCompatActivity implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
+        Random r = new Random();
+        String pcchoose = pcplay.get(r.nextInt(pcplay.size()));
         if (v.getId()==R.id.stone_button){
             this.mViewHolder.youchoice.setImageResource(R.drawable.stone);
         } else if (v.getId()==R.id.paper_button){
