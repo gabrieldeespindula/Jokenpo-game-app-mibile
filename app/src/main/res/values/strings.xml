@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Jokenpô</string>
+    <string name="you_win">YOU WIN</string>
+    <string name="you_lose">YOU LOSE</string>
 </resources>
