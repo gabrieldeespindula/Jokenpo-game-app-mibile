@@ -48,14 +48,19 @@ public class ClassicActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
         Random r = new Random();
         String pcchoose = pcplay.get(r.nextInt(pcplay.size()));
-        if (v.getId()==R.id.stone_button){
+        if ("stone".equals(pcchoose)){
+            this.mViewHolder.pcchoice.setImageResource(R.drawable.stone);
+        }if ("paper".equals(pcchoose)){
+            this.mViewHolder.pcchoice.setImageResource(R.drawable.paper);
+        }if ("scissors".equals(pcchoose)){
+            this.mViewHolder.pcchoice.setImageResource(R.drawable.scissors);
+        }if (v.getId()==R.id.stone_button){
             this.mViewHolder.youchoice.setImageResource(R.drawable.stone);
-        } else if (v.getId()==R.id.paper_button){
+        }if (v.getId()==R.id.paper_button){
             this.mViewHolder.youchoice.setImageResource(R.drawable.paper);
-        } else {
+        }if (v.getId()==R.id.scissors_button){
             this.mViewHolder.youchoice.setImageResource(R.drawable.scissors);
         }
-
     }
 
     private static class ViewHolder{
