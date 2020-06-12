@@ -35,6 +35,13 @@ public class ClassicActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
+        if (v.getId()==R.id.stone_button){
+            this.mViewHolder.youchoice.setImageResource(R.drawable.stone);
+        } else if (v.getId()==R.id.paper_button){
+            this.mViewHolder.youchoice.setImageResource(R.drawable.paper);
+        } else {
+            this.mViewHolder.youchoice.setImageResource(R.drawable.scissors);
+        }
 
     }
 
