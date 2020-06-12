@@ -26,7 +26,7 @@ public class ClassicActivity extends AppCompatActivity {
 
     }
 
-    static class ViewHolder{
+    private static class ViewHolder{
         TextView scoreboard;
         TextView winlose;
         ImageView pcchoice;
