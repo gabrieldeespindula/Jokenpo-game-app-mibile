@@ -19,6 +19,8 @@ public class KwwActivity extends AppCompatActivity implements View.OnClickListen
         return pcplay;
     }
     ArrayList<String> pcplay = pc();
+    Integer your_victories = 0;
+    Integer pc_victories = 0;
 
     private ViewHolder mViewHolder = new ViewHolder();
 
@@ -36,6 +38,7 @@ public class KwwActivity extends AppCompatActivity implements View.OnClickListen
         this.mViewHolder.scissors = findViewById(R.id.scissors_button);
 
         this.mViewHolder.winlose.setText("");
+        this.mViewHolder.scoreboard.setText(String.format("%s %s %s", your_victories, "X", pc_victories));
 
         this.mViewHolder.stone.setOnClickListener(this);
         this.mViewHolder.paper.setOnClickListener(this);
@@ -60,7 +63,7 @@ public class KwwActivity extends AppCompatActivity implements View.OnClickListen
         }if (v.getId()==R.id.scissors_button){
             this.mViewHolder.youchoice.setImageResource(R.drawable.scissors);
         }
-
+        this.mViewHolder.scoreboard.setText(String.format("%s %s %s", your_victories, "X", pc_victories));
     }
 
     private static class ViewHolder{

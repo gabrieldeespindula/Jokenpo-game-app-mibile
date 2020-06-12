@@ -55,9 +55,9 @@ public class KwwActivity extends AppCompatActivity implements View.OnClickListen
             this.mViewHolder.pcchoice.setImageResource(R.drawable.scissors);
         }if (v.getId()==R.id.stone_button){
             this.mViewHolder.youchoice.setImageResource(R.drawable.stone);
-        } else if (v.getId()==R.id.paper_button){
+        }if (v.getId()==R.id.paper_button){
             this.mViewHolder.youchoice.setImageResource(R.drawable.paper);
-        } else {
+        }if (v.getId()==R.id.scissors_button){
             this.mViewHolder.youchoice.setImageResource(R.drawable.scissors);
         }
 
