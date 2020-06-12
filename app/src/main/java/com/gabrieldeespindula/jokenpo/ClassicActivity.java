@@ -21,6 +21,7 @@ public class ClassicActivity extends AppCompatActivity implements View.OnClickLi
     ArrayList<String> pcplay = pc();
     Integer your_victories = 0;
     Integer pc_victories = 0;
+    Boolean keep = true;
 
     private ViewHolder mViewHolder = new ViewHolder();
 
@@ -49,37 +50,56 @@ public class ClassicActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
-        Random r = new Random();
-        String pcchoose = pcplay.get(r.nextInt(pcplay.size()));
-        if ("stone".equals(pcchoose)){
-            this.mViewHolder.pcchoice.setImageResource(R.drawable.stone);
-        }if ("paper".equals(pcchoose)){
-            this.mViewHolder.pcchoice.setImageResource(R.drawable.paper);
-        }if ("scissors".equals(pcchoose)){
-            this.mViewHolder.pcchoice.setImageResource(R.drawable.scissors);
-        }if (v.getId()==R.id.stone_button){
-            this.mViewHolder.youchoice.setImageResource(R.drawable.stone);
-            if ("paper".equals(pcchoose)){
-                pc_victories = pc_victories + 1;
-            }if ("scissors".equals(pcchoose)){
-                your_victories = your_victories + 1;
+        if (keep) {
+            Random r = new Random();
+            String pcchoose = pcplay.get(r.nextInt(pcplay.size()));
+            if ("stone".equals(pcchoose)) {
+                this.mViewHolder.pcchoice.setImageResource(R.drawable.stone);
             }
-        }if (v.getId()==R.id.paper_button){
-            this.mViewHolder.youchoice.setImageResource(R.drawable.paper);
-            if ("scissors".equals(pcchoose)){
-                pc_victories = pc_victories + 1;
-            }if ("stone".equals(pcchoose)){
-                your_victories = your_victories +1;
+            if ("paper".equals(pcchoose)) {
+                this.mViewHolder.pcchoice.setImageResource(R.drawable.paper);
             }
-        }if (v.getId()==R.id.scissors_button){
-            this.mViewHolder.youchoice.setImageResource(R.drawable.scissors);
-            if ("stone".equals(pcchoose)){
-                pc_victories = pc_victories + 1;
-            }if ("paper".equals(pcchoose)){
-                your_victories = your_victories +1;
+            if ("scissors".equals(pcchoose)) {
+                this.mViewHolder.pcchoice.setImageResource(R.drawable.scissors);
             }
+            if (v.getId() == R.id.stone_button) {
+                this.mViewHolder.youchoice.setImageResource(R.drawable.stone);
+                if ("paper".equals(pcchoose)) {
+                    pc_victories = pc_victories + 1;
+                }
+                if ("scissors".equals(pcchoose)) {
+                    your_victories = your_victories + 1;
+                }
+            }
+            if (v.getId() == R.id.paper_button) {
+                this.mViewHolder.youchoice.setImageResource(R.drawable.paper);
+                if ("scissors".equals(pcchoose)) {
+                    pc_victories = pc_victories + 1;
+                }
+                if ("stone".equals(pcchoose)) {
+                    your_victories = your_victories + 1;
+                }
+            }
+            if (v.getId() == R.id.scissors_button) {
+                this.mViewHolder.youchoice.setImageResource(R.drawable.scissors);
+                if ("stone".equals(pcchoose)) {
+                    pc_victories = pc_victories + 1;
+                }
+                if ("paper".equals(pcchoose)) {
+                    your_victories = your_victories + 1;
+                }
+            }
+            this.mViewHolder.scoreboard.setText(String.format("%s %s %s", your_victories, "X", pc_victories));
+            if (pc_victories > 2){
+                keep = false;
+            } if (your_victories > 2){
+                keep = false;
+            }
+        }else if (your_victories==3) {
+            this.mViewHolder.winlose.setText(R.string.you_win);
+        }else {
+            this.mViewHolder.winlose.setText(R.string.you_lose);
         }
-        this.mViewHolder.scoreboard.setText(String.format("%s %s %s", your_victories, "X", pc_victories));
     }
 
     private static class ViewHolder{
