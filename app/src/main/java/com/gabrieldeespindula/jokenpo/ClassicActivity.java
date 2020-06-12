@@ -45,12 +45,14 @@ public class ClassicActivity extends AppCompatActivity implements View.OnClickLi
         this.mViewHolder.paper.setOnClickListener(this);
         this.mViewHolder.scissors.setOnClickListener(this);
 
+        verify();
 
     }
 
+
     @Override
     public void onClick(View v) {
-        if (keep) {
+        if (keep){
             Random r = new Random();
             String pcchoose = pcplay.get(r.nextInt(pcplay.size()));
             if ("stone".equals(pcchoose)) {
@@ -90,14 +92,18 @@ public class ClassicActivity extends AppCompatActivity implements View.OnClickLi
                 }
             }
             this.mViewHolder.scoreboard.setText(String.format("%s %s %s", your_victories, "X", pc_victories));
-            if (pc_victories > 2){
+            if (pc_victories > 2) {
                 keep = false;
-            } if (your_victories > 2){
+            }if (your_victories > 2) {
                 keep = false;
             }
-        }else if (your_victories==3) {
+        }
+        verify();
+    }
+    public void verify(){
+        if (your_victories == 3) {
             this.mViewHolder.winlose.setText(R.string.you_win);
-        }else {
+        }else if (pc_victories == 3){
             this.mViewHolder.winlose.setText(R.string.you_lose);
         }
     }
