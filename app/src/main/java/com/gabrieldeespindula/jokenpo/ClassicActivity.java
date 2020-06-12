@@ -92,13 +92,13 @@ public class ClassicActivity extends AppCompatActivity implements View.OnClickLi
                 }
             }
             this.mViewHolder.scoreboard.setText(String.format("%s %s %s", your_victories, "X", pc_victories));
+            verify();
             if (pc_victories > 2) {
                 keep = false;
             }if (your_victories > 2) {
                 keep = false;
             }
         }
-        verify();
     }
     public void verify(){
         if (your_victories == 3) {
