@@ -7,7 +7,17 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class KwwActivity extends AppCompatActivity implements View.OnClickListener {
+    public static ArrayList<String> pc() {
+        ArrayList<String> pcplay = new ArrayList<>();
+        pcplay.add(0, "stone");
+        pcplay.add(1, "paper");
+        pcplay.add(2, "scissors");
+        return pcplay;
+    }
+    ArrayList<String> pcplay = pc();
 
     private ViewHolder mViewHolder = new ViewHolder();
 

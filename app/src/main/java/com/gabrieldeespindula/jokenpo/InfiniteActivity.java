@@ -8,9 +8,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
-
-import static android.support.v7.widget.AppCompatDrawableManager.get;
 
 public class InfiniteActivity extends AppCompatActivity implements View.OnClickListener {
     public static ArrayList<String> pc() {
