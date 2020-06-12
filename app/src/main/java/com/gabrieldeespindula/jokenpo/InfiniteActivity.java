@@ -59,10 +59,25 @@ public class InfiniteActivity extends AppCompatActivity implements View.OnClickL
             this.mViewHolder.pcchoice.setImageResource(R.drawable.scissors);
         }if (v.getId()==R.id.stone_button){
             this.mViewHolder.youchoice.setImageResource(R.drawable.stone);
+            if ("paper".equals(pcchoose)){
+                pc_victories = pc_victories + 1;
+            }if ("scissors".equals(pcchoose)){
+                your_victories = your_victories + 1;
+            }
         }if (v.getId()==R.id.paper_button){
             this.mViewHolder.youchoice.setImageResource(R.drawable.paper);
+            if ("scissors".equals(pcchoose)){
+                pc_victories = pc_victories + 1;
+            }if ("stone".equals(pcchoose)){
+                your_victories = your_victories +1;
+            }
         }if (v.getId()==R.id.scissors_button){
             this.mViewHolder.youchoice.setImageResource(R.drawable.scissors);
+            if ("stone".equals(pcchoose)){
+                pc_victories = pc_victories + 1;
+            }if ("paper".equals(pcchoose)){
+                your_victories = your_victories +1;
+            }
         }
         this.mViewHolder.scoreboard.setText(String.format("%s %s %s", your_victories, "X", pc_victories));
     }
