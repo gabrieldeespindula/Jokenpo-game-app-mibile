@@ -7,7 +7,7 @@
     android:padding="15dp">
 
     <TextView
-        android:id="@+id/placar"
+        android:id="@+id/scoreboard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/soft_background"
