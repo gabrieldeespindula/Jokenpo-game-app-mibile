@@ -21,6 +21,7 @@ public class KwwActivity extends AppCompatActivity implements View.OnClickListen
     ArrayList<String> pcplay = pc();
     Integer your_victories = 0;
     Integer pc_victories = 0;
+    Boolean keep = true;
 
     private ViewHolder mViewHolder = new ViewHolder();
 
@@ -48,37 +49,42 @@ public class KwwActivity extends AppCompatActivity implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
-        Random r = new Random();
-        String pcchoose = pcplay.get(r.nextInt(pcplay.size()));
-        if ("stone".equals(pcchoose)){
-            this.mViewHolder.pcchoice.setImageResource(R.drawable.stone);
-        }if ("paper".equals(pcchoose)){
-            this.mViewHolder.pcchoice.setImageResource(R.drawable.paper);
-        }if ("scissors".equals(pcchoose)) {
-            this.mViewHolder.pcchoice.setImageResource(R.drawable.scissors);
-        }if (v.getId()==R.id.stone_button){
-            this.mViewHolder.youchoice.setImageResource(R.drawable.stone);
-            if ("paper".equals(pcchoose)){
-                pc_victories = pc_victories + 1;
-            }if ("scissors".equals(pcchoose)){
-                your_victories = your_victories + 1;
-            }
-        }if (v.getId()==R.id.paper_button){
-            this.mViewHolder.youchoice.setImageResource(R.drawable.paper);
-            if ("scissors".equals(pcchoose)){
-                pc_victories = pc_victories + 1;
-            }if ("stone".equals(pcchoose)){
-                your_victories = your_victories +1;
-            }
-        }if (v.getId()==R.id.scissors_button){
-            this.mViewHolder.youchoice.setImageResource(R.drawable.scissors);
+        if (keep){
+            Random r = new Random();
+            String pcchoose = pcplay.get(r.nextInt(pcplay.size()));
             if ("stone".equals(pcchoose)){
-                pc_victories = pc_victories + 1;
+                this.mViewHolder.pcchoice.setImageResource(R.drawable.stone);
             }if ("paper".equals(pcchoose)){
-                your_victories = your_victories +1;
+                this.mViewHolder.pcchoice.setImageResource(R.drawable.paper);
+            }if ("scissors".equals(pcchoose)) {
+                this.mViewHolder.pcchoice.setImageResource(R.drawable.scissors);
+            }if (v.getId()==R.id.stone_button){
+                this.mViewHolder.youchoice.setImageResource(R.drawable.stone);
+                if ("paper".equals(pcchoose)){
+                    keep = false;
+                }if ("scissors".equals(pcchoose)){
+                    your_victories = your_victories + 1;
+                }
+            }if (v.getId()==R.id.paper_button){
+                this.mViewHolder.youchoice.setImageResource(R.drawable.paper);
+                if ("scissors".equals(pcchoose)){
+                    keep = false;
+                }if ("stone".equals(pcchoose)){
+                    your_victories = your_victories +1;
+                }
+            }if (v.getId()==R.id.scissors_button){
+                this.mViewHolder.youchoice.setImageResource(R.drawable.scissors);
+                if ("stone".equals(pcchoose)){
+                    keep = false;
+                }if ("paper".equals(pcchoose)){
+                    your_victories = your_victories +1;
+                }
+            }
+            this.mViewHolder.scoreboard.setText(String.format("%s %s %s", your_victories, "X", pc_victories));
+            if (!keep){
+                this.mViewHolder.winlose.setText(R.string.game_over);
             }
         }
-        this.mViewHolder.scoreboard.setText(String.format("%s %s %s", your_victories, "X", pc_victories));
     }
 
     private static class ViewHolder{
