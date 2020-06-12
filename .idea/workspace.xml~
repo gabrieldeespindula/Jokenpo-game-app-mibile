@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7e9b69f-cb05-4b41-89eb-36e8cbdb556d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gabrieldeespindula/jokenpo/InfiniteActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gabrieldeespindula/jokenpo/InfiniteActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/gabrieldeespindula/jokenpo/ClassicActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/gabrieldeespindula/jokenpo/ClassicActivity.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
